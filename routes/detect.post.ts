@@ -15,6 +15,8 @@ const FIREBASE_CONFIG = process.env["FIREBASE_CONFIG"] == null ? "" : process.en
 const STORAGE_BUCKET = process.env["STORAGE_BUCKET"] == null ? "" : process.env["STORAGE_BUCKET"]
 const PRESET = process.env["PRESET"] == null ? "" : process.env["PRESET"]
 
+console.log({ FIREBASE_CONFIG });
+
 // Initialize Firebase Admin SDK
 const firebaseApp = initializeApp({
 	credential: credential.cert(FIREBASE_CONFIG),
