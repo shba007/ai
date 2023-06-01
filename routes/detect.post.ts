@@ -19,7 +19,7 @@ console.log({ FIREBASE_CONFIG });
 
 // Initialize Firebase Admin SDK
 const firebaseApp = initializeApp({
-	credential: credential.cert(FIREBASE_CONFIG),
+	credential: credential.cert(JSON.parse(FIREBASE_CONFIG)),
 	storageBucket: STORAGE_BUCKET
 })
 const bucket = storage().bucket()
